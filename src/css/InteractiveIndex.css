@@ -1,0 +1,16 @@
+.index-portfolio-grid {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  transition: all ease 2s;
+}
+
+.index-portfolio-img {
+  max-height: 330px;
+  padding: 5px;
+}
+
+.index-portfolio-row {
+  display: flex;
+}
