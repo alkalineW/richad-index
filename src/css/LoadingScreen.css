@@ -1,0 +1,38 @@
+.Loading_wrap {
+  width: 100vw;
+  height: 100vh;
+  background-color: #222;
+  color: #fff;
+}
+
+.Loading-fade {
+  opacity: 0;
+  transition: all 0.5s ease 0.7s;
+}
+
+.Loading_logo {
+  width: 290px;
+  height: 70px;
+}
+
+.Loading_path {
+  clip-path: url(#SVGID_2_);
+  transition: all ease;
+}
+
+.Loading_text {
+  font-size: 18px;
+}
+
+@media (min-width: 576px) {
+  .Loading_text {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .Loading_logo {
+    width: 482px;
+    height: 114px;
+  }
+}

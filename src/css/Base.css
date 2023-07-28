@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'HunInn';
+  src: url(https://cdn.jsdelivr.net/gh/marsnow/open-huninn-font@1.1/font/jf-openhuninn.eot); /* IE9 Compat Modes */
+  src: url(https://cdn.jsdelivr.net/gh/marsnow/open-huninn-font@1.1/font/jf-openhuninn.eot?#iefix)
+      format('embedded-opentype'),
+    /* IE6-IE8 */
+      url(https://cdn.jsdelivr.net/gh/marsnow/open-huninn-font@1.1/font/jf-openhuninn.woff)
+      format('woff'),
+    /* Modern Browsers */
+      url(https://cdn.jsdelivr.net/gh/marsnow/open-huninn-font@1.1/font/jf-openhuninn.ttf)
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url(https://cdn.jsdelivr.net/gh/marsnow/open-huninn-font@1.1/font/jf-openhuninn.svg#SealmemoryHeader)
+      format('svg'); /* Legacy iOS */
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* display */
+.d-flex {
+  display: flex;
+}
+
+.d-block {
+  display: block;
+}
+
+/* flex */
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.list-style-none {
+  list-style: none;
+}
+
+/* position */
+.position-absolute {
+  position: absolute;
+}
+
+.position-relative {
+  position: relative;
+}
+
+/* margin */
+.mx-auto {
+  margin: auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
