@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import LoadingScreen from './LoadingScreen';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  let data = [];
+  let pageContent = '';
+
+  const [showLoading, setShowLoading] = useState(true);
+
+  // const [data, setData] = useState(imgData.imgList.map((eachImgUrl) => eachImgUrl));
+
+  data = imgData.imgList.map((eachImgUrl) => eachImgUrl);
+
+  showLoading
+    ? (pageContent = (
+        <LoadingScreen isActive={true} onShow={() => setShowLoading(false)} />
+      ))
+    : (pageContent = <InteractiveIndex imgList={data} isActive={true} />);
+
+  return <div className='App'>{pageContent}</div>;
 }
 
 export default App;
