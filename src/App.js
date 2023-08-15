@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import './css/App.css';
+import InteractiveIndex from './InteractiveIndex';
 import LoadingScreen from './LoadingScreen';
+import imgData from './api/imgList.json';
 
 function App() {
   let data = [];
