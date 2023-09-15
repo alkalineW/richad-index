@@ -74,7 +74,7 @@ function LoadingScreen({ onShow }) {
 
   return (
     <div
-      className={`d-flex align-items-center flex-column justify-content-center Loading_wrap ${
+      className={`d_flex align_items_center flex_column justify_content_center Loading_wrap ${
         isFade ? 'Loading-fade' : ''
       }`}
     >
