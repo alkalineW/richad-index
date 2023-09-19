@@ -14,58 +14,78 @@
       format('svg'); /* Legacy iOS */
 }
 
-.text-left {
+.font_weight_bold {
+  font-weight: bold;
+}
+
+.font_huninn {
+  font-family: 'HunInn', Arial, Helvetica, sans-serif;
+}
+
+.text_left {
   text-align: left;
 }
 
-.text-center {
+.text_center {
   text-align: center;
 }
 
-.text-right {
+.text_right {
   text-align: right;
 }
 
 /* display */
-.d-flex {
+.d_flex {
   display: flex;
 }
 
-.d-block {
+.d_block {
   display: block;
 }
 
 /* flex */
-.align-items-center {
+.align_items_center {
   align-items: center;
 }
 
-.justify-content-center {
+.justify_content_center {
   justify-content: center;
 }
 
-.flex-column {
+.flex_column {
   flex-direction: column;
 }
 
-.list-style-none {
+.list_style_none {
   list-style: none;
 }
 
+.flex_wrap {
+  flex-wrap: wrap;
+}
+
+.flex_column {
+  flex-direction: column;
+}
+
+.align_items_end {
+  align-items: flex-end;
+}
+
 /* position */
-.position-absolute {
+.position_absolute {
   position: absolute;
 }
 
-.position-relative {
+.position_relative {
   position: relative;
 }
 
 /* margin */
-.mx-auto {
+.mx_auto {
   margin: auto;
 }
 
-.overflow-hidden {
+.overflow_hidden {
   overflow: hidden;
 }
