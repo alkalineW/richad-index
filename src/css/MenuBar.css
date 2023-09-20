@@ -1,24 +1,13 @@
 .Menubar_wrap {
-  background-color: rgba(255, 255, 255, 0.55);
-  width: max(21%, 320px);
-  left: 8%;
-  /* border: 1px solid #222; */
+  background-color: rgba(255, 255, 255, 0.65);
   position: fixed;
-  height: 100vh;
   backdrop-filter: blur(5px);
-  box-shadow: rgba(0, 0, 0, 0.3) 15px 0px 28px;
   z-index: 9;
 }
 
 .Menubar_logo_wrap {
-  display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.Menubar_logo {
-  width: max(25%, 280px);
-  padding: 3rem 0;
 }
 
 .Menubar_list {
@@ -27,10 +16,31 @@
 
 .Menubar_list_item {
   font-size: 21px;
-  padding: 0.5rem 0;
 }
 
-.Menubar_list_item:hover::after {
+.Menubar_list_item a,
+.Menubar_list_item button {
+  text-decoration: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 21px;
+}
+
+/* index version */
+.Menubar_wrap_index {
+  width: max(21%, 320px);
+  left: 8%;
+  box-shadow: rgba(0, 0, 0, 0.3) 15px 0px 28px;
+  height: 100vh;
+}
+
+.Menubar_logo_index {
+  width: max(25%, 280px);
+  padding: 3rem 0;
+}
+
+.Menubar_wrap_index .Menubar_list_item:hover::after {
   content: '';
   position: absolute;
   width: 3px;
@@ -40,6 +50,88 @@
   top: 7px;
 }
 
-.Menubar_list_item a {
-  text-decoration: none;
+.Menubar_wrap_index .Menubar_list_item {
+  padding: 0.5rem 0;
+}
+
+.Menubar_wrap_index .Menubar_list_item a {
+  color: #194b92;
+}
+
+/* about version */
+.Menubar_wrap_about {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.Menubar_logo_about {
+  padding: 3rem 0;
+}
+
+.Menubar_list_wrap_about {
+  padding: 0 2rem 0 0;
+}
+
+.Menubar_list_wrap_about .Menubar_list_item:hover::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  left: 0%;
+  background: #fa5869;
+  top: calc(50% - 4px);
+  z-index: -1;
+}
+
+.Menubar_list_wrap_about .Menubar_list_item:last-of-type:hover::after {
+  /* width: 102%; */
+  /* left: 7%; */
+}
+
+.Menubar_list_wrap_about .Menubar_list_item a {
+  padding: 0 10px;
+  color: #222;
+}
+
+.Menubar_list_wrap_about .Menubar_list_item:last-of-type a {
+  padding: 0 0 0 10px;
+}
+
+.Menubar_list_logo {
+  width: 100%;
+  max-width: 330px;
+}
+
+.Menubar_wrap_about .Menubar_list {
+  padding: 0rem 0.5rem 2rem 1rem;
+}
+
+.Menubar_list {
+  z-index: 3;
+}
+
+/* work version */
+.Menubar_wrap.Menubar_wrap_work {
+  background-color: transparent;
+  position: fixed;
+  height: 100vh;
+  width: 22%;
+  backdrop-filter: none;
+  align-items: flex-end;
+  top: 0;
+}
+
+.Menubar_wrap_work .Menubar_logo_wrap {
+  margin-top: 4rem;
+}
+
+.Menubar_wrap_work .Menubar_list_item {
+  margin: 0.5rem 0;
+}
+
+.Menubar_list_wrap_work {
+  justify-content: space-between;
+  height: 100%;
 }
