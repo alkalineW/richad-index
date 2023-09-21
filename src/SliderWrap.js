@@ -18,7 +18,7 @@ export default function SliderWrap({ sliderSettings, imgList }) {
   });
 
   return (
-    <div class='slider-row'>
+    <div className='slider-row'>
       <Slider {...sliderSettings}>{singleSlider}</Slider>
     </div>
   );
