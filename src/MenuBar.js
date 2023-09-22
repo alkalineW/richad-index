@@ -9,7 +9,7 @@ import Footer from './Footer';
 import { Link, BrowserRouter } from 'react-router-dom';
 
 function MenuBar({ origin, excuteScroll }) {
-  const [data, setData] = useState({ title: 'initial title' });
+  const [data, setData] = useState({ scrollToSection: true });
   if (origin == 'index') {
     return (
       <div className='Menubar_wrap Menubar_wrap_index'>
@@ -29,7 +29,9 @@ function MenuBar({ origin, excuteScroll }) {
               <Link to='/about'>About</Link>
             </li>
             <li className='Menubar_list_item position_relative'>
-              <button onClick={excuteScroll}>Contact</button>
+            <Link to='/about' state={{ data: data }}>
+                Contact
+              </Link>
             </li>
           </ul>
         </div>
@@ -89,9 +91,6 @@ function MenuBar({ origin, excuteScroll }) {
               <Link to='/about'>About</Link>
             </li>
             <li className='Menubar_list_item position_relative'>
-              {/* <button onClick={()=>{
-                
-              }}>Contact</button> */}
               <Link to='/about' state={{ data: data }}>
                 Contact
               </Link>
