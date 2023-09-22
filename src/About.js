@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState , useEffect } from 'react';
 import MenuBar from './MenuBar';
 import './css/Base.css';
 import './css/About.css';
@@ -14,9 +14,10 @@ function About(props) {
   // ---test
   const location = useLocation();
   console.log(`${location.pathname}`);
+  let passBetweenRoute = null;
   location.state
-    ? console.log(location.state)
-    : console.log('falsy location state');
+    ? passBetweenRoute =location.state.data.scrollToSection
+    : passBetweenRoute = false;
   // ---test
 
   function importAll(r) {
@@ -35,16 +36,24 @@ function About(props) {
     <AboutIcon imgUrl={eachUrl} desc={aboutData.aboutDesc[index]} />
   ));
 
+  function handleScrollToContact(){
+    contactRef.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+    })
+  }
+
+  useEffect(()=>{
+    if (passBetweenRoute !== false){
+      handleScrollToContact();
+    }
+  }, [])
+
   return (
     <div>
       <MenuBar
         origin='about'
-        excuteScroll={() =>
-          contactRef.current.scrollIntoView({
-            behavior: 'smooth',
-            block: 'center',
-          })
-        }
+        excuteScroll = {handleScrollToContact}
       />
       <div className='about_sec'>
         <h1 className='font_huninn'>We</h1>
