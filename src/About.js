@@ -5,28 +5,18 @@ import './css/About.css';
 import AboutIcon from './AboutIcon';
 import aboutData from './api/about.json';
 import Footer from './Footer';
-// test
+import {importAll} from './methods.js';
 import { useLocation } from 'react-router-dom';
 
 function About(props) {
   const [scrollToContact, setScrollToContact] = useState(false);
 
-  // ---test
   const location = useLocation();
   console.log(`${location.pathname}`);
   let passBetweenRoute = null;
   location.state
     ? passBetweenRoute =location.state.data.scrollToSection
     : passBetweenRoute = false;
-  // ---test
-
-  function importAll(r) {
-    let images = {};
-    r.keys().map((item, index) => {
-      images[item.replace('./', '')] = r(item);
-    });
-    return images;
-  }
   const contactRef = useRef(null);
   const aboutIconUrl = importAll(
     require.context('./img/about', false, /\.(png|jpe?g)$/)
