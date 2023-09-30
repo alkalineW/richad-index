@@ -26,11 +26,6 @@ function generateRandomColor() {
     }, 3500);
     return () => clearInterval(intervalId);
   }, []);
-  const imgParts = imgList.map((eachImgUrl) => (
-    <a>
-      <img className='index_portfolio_img' src={'/portfolio/' + eachImgUrl} />
-    </a>
-  ));
 
   const sliderSettings = {
     dots: false,

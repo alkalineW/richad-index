@@ -125,6 +125,7 @@
 
 .Menubar_wrap_work .Menubar_logo_wrap {
   margin-top: 4rem;
+  width: 100%;
 }
 
 .Menubar_wrap_work .Menubar_list_item {
@@ -134,4 +135,12 @@
 .Menubar_list_wrap_work {
   justify-content: space-between;
   height: 100%;
+}
+
+.Menubar_list_wrap_work h1{
+  padding-right: 2rem;
+}
+
+.Menubar_list_wrap_work li a{
+  color: #fff;
 }

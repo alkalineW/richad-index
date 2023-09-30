@@ -10,7 +10,7 @@ import { Link, BrowserRouter } from 'react-router-dom';
 
 function MenuBar({ origin, excuteScroll }) {
   const [data, setData] = useState({ scrollToSection: true });
-  if (origin == 'index') {
+  if (origin === 'index') {
     return (
       <div className='Menubar_wrap Menubar_wrap_index'>
         <div className='Menubar_logo_wrap d_flex justify_content_center align_items_center'>

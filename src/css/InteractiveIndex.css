@@ -1,5 +1,6 @@
 .index_portfolio_wrap {
   background-color: #fa5869;
+  transition: all ease .9s;
 }
 
 .index_portfolio_grid {
