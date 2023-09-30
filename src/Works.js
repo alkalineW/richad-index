@@ -2,8 +2,13 @@ import React , { useState } from 'react';
 import './css/Base.css';
 import './css/Works.css';
 import MenuBar from './MenuBar';
+<<<<<<< Updated upstream
 import WorksGrid from './WorksGrid';
 import imgData from './api/imgList.json';
+=======
+// import WorkRow from './WorkRow';
+import { importAll, sortOutArray } from './methods';
+>>>>>>> Stashed changes
 
 export default function Works() {
   const data = imgData.imgList.map((eachImgUrl) => eachImgUrl);
@@ -20,8 +25,58 @@ export default function Works() {
     }
   }
 
+
+  const generateWorkArray = sortOutArray(Object.values(workImgData), 12);
+
+  let workRowArray = generateWorkArray;
+
+  console.log(workRowArray);
+
+  const workRow = workRowArray.map((workRowArray) => <div className='grid-row'>{workRowArray.map((eachUrl, index) => {
+    let gridElm = '';
+    switch ((index + 1) % 12) {
+      case 1:
+        gridElm = <div className='grid-1'><img src={eachUrl} /></div>
+        break;
+      case 2:
+        gridElm = <div className='grid-2'><img src={eachUrl} /></div>
+        break;
+      case 3:
+        gridElm = <div className='grid-3'><img src={eachUrl} /></div>
+        break;
+      case 4:
+        gridElm = <div className='grid-4'><img src={eachUrl} /></div>
+        break;
+      case 5:
+        gridElm = <div className='grid-5'><img src={eachUrl} /></div>
+        break;
+      case 6:
+        gridElm = <div className='grid-6'><img src={eachUrl} /></div>
+        break;
+      case 7:
+        gridElm = <div className='grid-7'><img src={eachUrl} /></div>
+        break;
+      case 8:
+        gridElm = <div className='grid-8'><img src={eachUrl} /></div>
+        break;
+      case 9:
+        gridElm = <div className='grid-9'><img src={eachUrl} /></div>
+        break;
+      case 10:
+        gridElm = <div className='grid-10'><img src={eachUrl} /></div>
+        break;
+      case 11:
+        gridElm = <div className='grid-11'><img src={eachUrl} /></div>
+        break;
+      default:
+        gridElm = <div className='grid-12'><img src={eachUrl} /></div>
+    }
+    return gridElm;
+  })}</div>)
+
   return (
     <div className='Works_wrap'>
+<<<<<<< Updated upstream
       <div>
       <button onClick={()=>{
           setWorkData(filterImgData(workData , ''))
@@ -39,6 +94,16 @@ export default function Works() {
       </div>
       <MenuBar orgin={'Works'} />
       <WorksGrid imgList={workData}/>
+=======
+      <MenuBar origin={'Works'} />
+      <div className='Works_album_wrap position_relative'>
+        <div className="grid-outer">
+          {/* {workGrid} */}
+        </div>
+        {workRow}
+        {/* <WorkRow data={workRowArray}/> */}
+      </div>
+>>>>>>> Stashed changes
     </div>
   );
 }
