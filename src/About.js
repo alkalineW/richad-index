@@ -8,7 +8,7 @@ import Footer from './Footer';
 import {importAll} from './methods.js';
 import { useLocation } from 'react-router-dom';
 
-function About(props) {
+function About() {
   const [scrollToContact, setScrollToContact] = useState(false);
 
   const location = useLocation();
