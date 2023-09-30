@@ -2,17 +2,14 @@ import React, { useState, useEffect } from 'react';
 import './css/App.css';
 import InteractiveIndex from './InteractiveIndex';
 import LoadingScreen from './LoadingScreen';
-import imgData from './api/imgList.json';
+import {imgData }from './api/imgList';
 
 function App() {
   let data = [];
   let pageContent = '';
 
   const [showLoading, setShowLoading] = useState(true);
-
-  // const [data, setData] = useState(imgData.imgList.map((eachImgUrl) => eachImgUrl));
-
-  data = imgData.imgList.map((eachImgUrl) => eachImgUrl);
+  data = imgData.map((eachData) => eachData.imgUrl);
 
   showLoading
     ? (pageContent = (

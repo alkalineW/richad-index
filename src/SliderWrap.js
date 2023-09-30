@@ -10,8 +10,7 @@ export default function SliderWrap({ sliderSettings, imgList }) {
     return (
       <div className='slide_column' key={index}>
         <a href=''>
-          <img className='slider_img' src={'/portfolio/' + eachUrl} alt='bla' />
-          {/* <img src='http://placekitten.com/g/400/200' alt='bla' /> */}
+          <img className='slider_img' src={eachUrl} alt='bla' />
         </a>
       </div>
     );
