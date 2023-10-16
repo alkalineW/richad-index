@@ -39,11 +39,40 @@ function MenuBar({ origin, excuteScroll }) {
         <Footer origin={origin} />
       </div>
     );
-  } else if (origin === 'about') {
-    return (
-      <div className='Menubar_wrap Menubar_wrap_about d_flex'>
-        <div className='Menubar_logo_wrap d_flex justify_content_center align_items_center'>
-          <Link to='/'>
+  } else if (origin === "about") {
+    return checkMobile() ? (
+      <div className="Menubar_wrap Menubar_wrap_about_mobile align_items_center">
+        <div className="Menubar_logo_wrap">
+          <Link to="/">
+            <img
+              className="Menubar_logo Menubar_logo_about"
+              src={aboutLogo}
+              alt="richad-logo"
+            />
+          </Link>
+          <img className="Menubar_list_logo" src={textLogo} alt="里安國際" />
+        </div>
+        <div className="Menubar_list_wrap_about">
+          <ul className="Menubar_list position_relative list_style_none d_flex justify_content_center align_items_center">
+            <li className="Menubar_list_item position_relative">
+              <Link to="/">Home</Link>
+            </li>
+            <li className="Menubar_list_item position_relative">
+              <Link to="/works">Works</Link>
+            </li>
+            <li className="Menubar_list_item position_relative">
+              <Link to="/about">About</Link>
+            </li>
+            <li className="Menubar_list_item position_relative">
+              <button onClick={excuteScroll}>Contact</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    ) : (
+      <div className="Menubar_wrap Menubar_wrap_about d_flex">
+        <div className="Menubar_logo_wrap d_flex justify_content_center align_items_center">
+          <Link to="/">
             <img
               className="Menubar_logo Menubar_logo_about"
               src={aboutLogo}
@@ -51,7 +80,7 @@ function MenuBar({ origin, excuteScroll }) {
             />
           </Link>
         </div>
-        <div className="Menubar_list_wrap_about flex_column d_flex align_items_end">
+        <div className="Menubar_list_wrap_about flex_column d_flex align_items_end position_relative">
           <img className="Menubar_list_logo" src={textLogo} alt="里安國際" />
           <ul className="Menubar_list position_relative list_style_none text_right d_flex flex_wrap">
             <li className={"Menubar_list_item position_relative"}>
@@ -67,11 +96,11 @@ function MenuBar({ origin, excuteScroll }) {
               <button onClick={excuteScroll}>Contact</button>
             </li>
           </ul>
+          <Footer origin={origin} />
         </div>
-        <Footer origin={origin} />
       </div>
     );
-  } else {
+  } else if (origin === "Works") {
     return (
       <div className="Menubar_wrap Menubar_wrap_work d_flex ">
         <div className="Menubar_logo_wrap">

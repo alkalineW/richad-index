@@ -4,10 +4,25 @@
   bottom: 1rem;
 }
 
-.Footer_text_index{
+.Footer_text_index {
   left: 2rem;
 }
 
-.Footer_text_about{
+.Footer_text_about {
   right: 2rem;
+  bottom: 12px;
+  margin: 0;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .Footer_text_about {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) {
+  .Footer_text_about {
+    right: 2.6rem;
+  }
 }

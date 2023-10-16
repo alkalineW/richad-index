@@ -1,4 +1,14 @@
 .about_col {
-  width: 25%;
-  max-width: 260px;
+  max-width: 160px;
+}
+
+.about_col img{
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .about_col{
+    width: 25%;
+    max-width: 270px;
+  }
 }

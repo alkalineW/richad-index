@@ -55,7 +55,9 @@ function About() {
       </div>
       <div className="about_sec">
         <h1 className="font_huninn">Service</h1>
-        <div className="d_flex flex_wrap">{aboutIconCol}</div>
+        <div className="d_flex justify_content_center justify_content_left_md flex_wrap align_items_center">
+          {aboutIconCol}
+        </div>
       </div>
       <div className="about_sec">
         <h1 className="font_huninn">Clients</h1>
