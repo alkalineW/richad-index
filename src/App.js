@@ -31,6 +31,10 @@ function App() {
             name="keywords"
             content="平面設計,包裝設計,網頁設計,展場佈置,活動規劃,禮品設計,廣告設計,商業設計"
           />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
         </Helmet>
         {pageContent}
       </HelmetProvider>
