@@ -10,13 +10,13 @@ function App() {
   let pageContent = "";
 
   const [showLoading, setShowLoading] = useState(true);
-  data = imgData.map((eachData) => eachData.imgUrl);
+  data = imgData.map((eachData) => eachData);
 
   showLoading
     ? (pageContent = (
         <LoadingScreen isActive={true} onShow={() => setShowLoading(false)} />
       ))
-    : (pageContent = <InteractiveIndex imgList={data} isActive={true} />);
+    : (pageContent = <InteractiveIndex data={imgData} isActive={true} />);
 
   return (
     <div className="App">

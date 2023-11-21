@@ -3,11 +3,14 @@ import "./css/Base.css";
 import "./css/Works.css";
 import MenuBar from "./MenuBar";
 import { importAll, sortOutArray } from "./methods";
+import { imgData } from "./api/imgList";
 
 export default function Works() {
   const workImgData = importAll(
     require.context("./img/work", false, /\.(png|jpe?g|gif)$/)
   );
+  const data = imgData.map((eachData) => eachData);
+  const [workData, setWorkData] = useState(data);
   // const data = imgData.imgList.map((eachImgUrl) => eachImgUrl);
   // console.log(data);
   // const [ workData, setWorkData] = useState(data);
@@ -22,7 +25,8 @@ export default function Works() {
   //   }
   // }
 
-  const generateWorkArray = sortOutArray(Object.values(workImgData), 12);
+  // const generateWorkArray = sortOutArray(Object.values(workImgData), 12);
+  const generateWorkArray = sortOutArray(workData, 12);
 
   let workRowArray = generateWorkArray;
 

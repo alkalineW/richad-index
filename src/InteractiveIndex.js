@@ -4,7 +4,7 @@ import "./css/Base.css";
 import MenuBar from "./MenuBar";
 import SliderWrap from "./SliderWrap";
 
-function InteractiveIndex({ imgList }) {
+function InteractiveIndex({ data }) {
   // setInterval for the effect of background color changing
   function generateRandomColor() {
     const colorAlphabet = ["a", "b", "c", "d", "e", "f"];
@@ -47,9 +47,9 @@ function InteractiveIndex({ imgList }) {
     >
       <MenuBar origin="index" />
       <div className="index_portfolio_grid">
-        <SliderWrap imgList={imgList} sliderSettings={sliderSettings} />
-        <SliderWrap imgList={imgList} sliderSettings={sliderSettings} />
-        <SliderWrap imgList={imgList} sliderSettings={sliderSettings} />
+        <SliderWrap data={data} sliderSettings={sliderSettings} />
+        <SliderWrap data={data} sliderSettings={sliderSettings} />
+        <SliderWrap data={data} sliderSettings={sliderSettings} />
       </div>
       {/* <PortfolioGrid /> */}
     </div>
