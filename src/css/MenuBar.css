@@ -37,8 +37,11 @@
 }
 
 .Menubar_logo_index {
-  width: max(25%, 200px);
+  width: max(25%, 170px);
   padding: 0;
+}
+.Menubar_wrap_index .Menubar_list {
+  padding: 3rem 2rem 0 1rem;
 }
 
 .Menubar_wrap_index .Menubar_list_item:hover::after {
@@ -120,7 +123,7 @@
   top: 0;
   width: 100%;
   display: flex;
-  padding: 30px 0 8px 0;
+  padding: 15px 0 10px 0;
   justify-content: space-evenly;
 }
 
@@ -169,7 +172,8 @@
   align-items: center;
   /* justify-content: space-between; */
   flex-wrap: wrap;
-  padding: 30px 0 8px 0;
+  /* padding: 30px 0 8px 0; */
+  padding: 15px 0 10px 0;
 }
 
 .Menubar_wrap_work .Menubar_logo_wrap {
@@ -191,7 +195,7 @@
   font-size: 2rem;
   margin: 0;
   text-align: center;
-  width: calc(100% - 220px);
+  /* width: calc(100% - 220px); */
   padding: 10px 0 0 0;
   max-width: 200px;
 }
@@ -225,11 +229,32 @@
 }
 
 /* single version */
-.Menubar_wrap.Menubar_wrap_single {
+.Menubar_wrap_work.Menubar_wrap.Menubar_wrap_single {
   background-color: #fff;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  height: unset;
 }
 .Menubar_wrap.Menubar_wrap_single h1 {
   color: #fa5869;
+}
+
+.Menubar_wrap_single .Menubar_logo_wrap {
+  order: 0;
+}
+.Menubar_wrap_single.Menubar_wrap_work h1 {
+  max-width: unset;
+  text-align: right;
+}
+
+.Menubar_list_wrap_single {
+  order: 1;
+}
+
+.Menubar_wrap_single .single_info {
+  order: 2;
+  width: 100%;
 }
 
 .Menubar_list_wrap_single li a {
@@ -238,18 +263,33 @@
 
 .Menubar_wrap_single .single_subtitle {
   color: #194b92;
+  text-align: center;
+  margin: 2rem 0 0.8rem 0;
+  /* font-size: 2.5rem; */
+  font-size: 1.8rem;
+}
+.single_category_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .Menubar_wrap_single .single_category_text {
   color: #5d5a5a;
+  text-align: center;
+  margin: 0.5rem 0;
+  font-size: 1rem;
 }
 .Menubar_wrap_single .single_category_pill {
   color: #fa5869;
   border: 2px solid #fa5869;
   display: inline-block;
-  padding: 5px;
+  padding: 0 7px 2px 7px;
   right: 0;
   border-radius: 100px;
+  margin: 0;
+  font-size: 12px;
+  margin-left: 12px;
 }
 /* max-width => 小於多少則... */
 
@@ -269,14 +309,18 @@
 
 @media (min-width: 576px) {
   .Menubar_wrap_index {
-    width: max(21%, 320px);
+    width: max(21%, 260px);
     left: 8%;
     height: 100%;
     display: block;
     top: 0;
   }
+
+  .Menubar_wrap_index .Menubar_list {
+    padding: 3rem 2rem 3rem 1rem;
+  }
   .Menubar_logo_index {
-    width: max(25%, 280px);
+    width: max(25%, 200px);
     padding: 3rem 0;
   }
   .Menubar_list_item a,
@@ -301,6 +345,13 @@
   .Menubar_list_item a,
   .Menubar_list_item button {
     font-size: 19px;
+  }
+  .Menubar_wrap_index {
+    width: max(21%, 320px);
+    left: 8%;
+    height: 100%;
+    display: block;
+    top: 0;
   }
   /* work version */
   .Menubar_wrap.Menubar_wrap_work {
@@ -350,6 +401,42 @@
   .Menubar_wrap_about .Menubar_logo_wrap {
     /* width: 220px; */
   }
+  /* single over tablet version */
+  .Menubar_wrap.Menubar_wrap_work.Menubar_wrap_single {
+    height: 100%;
+    width: 22%;
+    /* align-items: flex-end; */
+    top: 0;
+    flex-direction: column;
+    flex-wrap: unset;
+    padding: 0;
+  }
+  .Menubar_list_wrap_single {
+    order: 2;
+  }
+
+  .Menubar_wrap_single .single_info {
+    order: 1;
+    /* width: auto; */
+  }
+  .Menubar_wrap_single .single_subtitle {
+    text-align: right;
+    font-size: 2.5rem;
+    padding: 1rem 0 2rem 0;
+  }
+  .Menubar_wrap_single .single_category_text {
+    text-align: right;
+    margin: 1rem 0;
+  }
+  .single_category_wrap {
+    display: block;
+  }
+  .Menubar_wrap_single .single_category_text {
+    font-size: 1.3rem;
+  }
+  .Menubar_wrap_single .single_category_pill {
+    font-size: 1.3rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -376,5 +463,11 @@
   }
   .Menubar_wrap.Menubar_wrap_work .Footer_text {
     font-size: 16px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .Menubar_logo_index {
+    width: max(25%, 280px);
   }
 }

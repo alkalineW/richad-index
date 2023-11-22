@@ -3,7 +3,7 @@ import logo from "./img/logo.svg";
 import aboutLogo from "./img/aboutLogo.svg";
 import textLogo from "./img/textLogo.svg";
 import workLogo from "./img/workLogo.svg";
-// import singleLogo from "./img/singleLogo.svg";
+import singleLogo from "./img/singleLogo.svg";
 import "./css/MenuBar.css";
 import "./css/Base.css";
 import Footer from "./Footer";
@@ -108,9 +108,9 @@ function MenuBar({ origin, excuteScroll, name, category }) {
           <Link to="/">
             <img className="Menubar_logo" src={workLogo} alt="richad-logo" />
           </Link>
+          <h1 className="font_huninn text_wh">Works</h1>
         </div>
         <div className="Menubar_list_wrap_work d_flex flex_column">
-          <h1 className="font_huninn text_wh">Works</h1>
           <ul className="Menubar_list position_relative list_style_none text_right d_flex justify_content_center align_items_end flex_column">
             <li className={"Menubar_list_item position_relative"}>
               <Link to="/">Home</Link>
@@ -139,14 +139,17 @@ function MenuBar({ origin, excuteScroll, name, category }) {
       <div className="Menubar_wrap Menubar_wrap_work Menubar_wrap_single d_flex">
         <div className="Menubar_logo_wrap">
           <Link to="/">
-            {/* <img className="Menubar_logo" src={singleLogo} alt="richad-logo" /> */}
+            <img className="Menubar_logo" src={singleLogo} alt="richad-logo" />
           </Link>
+          <h1 className="font_huninn">Works</h1>
         </div>
-        <h1 className="font_huninn">Works</h1>
+
         <div className="single_info text_right">
-          <h2 className="text_right single_subtitle">{name}</h2>
-          <p className="text_right single_category_text">書冊編排設計</p>
-          <p className="text_right single_category_pill">{category}</p>
+          <h2 className="text_right font_huninn single_subtitle">{name}</h2>
+          <div className="single_category_wrap">
+            <p className="text_right single_category_text">書冊編排設計</p>
+            <p className="text_right single_category_pill">{category}</p>
+          </div>
         </div>
         <div className="Menubar_list_wrap_single d_flex">
           <ul className="Menubar_list position_relative list_style_none text_right d_flex justify_content_center align_items_end flex_column">
