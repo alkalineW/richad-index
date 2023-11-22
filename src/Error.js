@@ -1,4 +1,4 @@
-import { useRouteError } from "react-router-dom";
+import { useRouteError, Link } from "react-router-dom";
 import React from "react";
 
 export default function Error() {
@@ -10,8 +10,9 @@ export default function Error() {
       <h1>Opps!</h1>
       <p>Sorry, there's something went wrong.</p>
       <p>
-        <i>{error.statusText || error.message}</i>
+        {/* <i>{error.statusText ? error.statusText : error.message}</i> */}
       </p>
+      <Link to={"."}>Return to homepage</Link>
     </div>
   );
 }
