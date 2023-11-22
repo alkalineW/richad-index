@@ -4,11 +4,11 @@ import "./css/index.css";
 import reportWebVitals from "./reportWebVitals";
 import App from "./App";
 import About from "./About.js";
-import Contact from "./Contact.js";
 import Error from "./Error.js";
 import Works from "./Works.js";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Single from "./Single";
 
 const router = createBrowserRouter([
   {
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     path: "works",
     element: <Works />,
   },
-  { path: "works/:category/:workId", element: <Single /> },
+  { path: "works/:category/:projectName", element: <Single /> },
   { path: "single", element: <Single /> },
   { path: "*", element: <Error /> },
 ]);

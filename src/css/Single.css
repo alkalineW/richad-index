@@ -1,0 +1,22 @@
+.scroll_top {
+  right: 1rem;
+  border: 2px solid #faa5b9;
+  border-radius: 200px;
+  bottom: 1rem;
+  width: 44px;
+  height: 44px;
+}
+
+.single_content_wrap {
+  padding: 6rem 15px 0 15px;
+  max-width: 100%;
+  left: 0;
+}
+
+@media (min-width: 768px) {
+  .single_content_wrap {
+    padding: 15px 0 15px 0;
+    max-width: calc(100% - 25%);
+    left: 24.8%;
+  }
+}
