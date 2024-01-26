@@ -8,13 +8,18 @@ import "./css/Single.css";
 
 export default function Single() {
   const location = useLocation();
-  const { name, gallery } = location.state;
+  const { name, gallery, completionDate } = location.state;
   const { category } = useParams();
 
   return (
     <div className="single_wrap">
       <MenuBar origin={"Single"} name={name} category={category} />
       <div className="position_relative single_content_wrap">
+        <p className="position_absolute text_right font_huninn">
+          {completionDate.year}
+          <br />
+          {completionDate.month}
+        </p>
         <SingleImageGallery gallery={gallery} />
         <div
           onClick={() => {
