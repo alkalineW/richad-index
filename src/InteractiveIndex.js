@@ -22,7 +22,7 @@ function InteractiveIndex({ data }) {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setBgcolor(generateRandomColor());
-    }, 3500);
+    }, 7000);
     return () => clearInterval(intervalId);
   }, []);
 
