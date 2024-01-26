@@ -10,6 +10,7 @@ export const imgData = [
       "./img/work/ctbc_ecash/000.jpg",
       "./img/work/ctbc_ecash/ctbc_ecash.png",
     ],
+    completionDate: { year: "2021", month: "Dec" },
     liveDemo: "",
   },
   {
@@ -24,6 +25,7 @@ export const imgData = [
       "./img/work/mli_lunar/mli_lunar2.jpg",
       "./img/work/mli_lunar/mli_lunar3.jpg",
     ],
+    completionDate: { year: "2023", month: "Sep" },
     liveDemo: "https://richad.com.tw/test/230913-mli-moon_fest/",
   },
   {
@@ -39,6 +41,7 @@ export const imgData = [
       "./img/work/ctbc_birthday/ctbc_birthday3.jpg",
       "./img/work/ctbc_birthday/ctbc_birthday4.jpg",
     ],
+    completionDate: { year: "2022", month: "Jan" },
     liveDemo: "",
   },
   {
@@ -52,6 +55,7 @@ export const imgData = [
       "./img/work/landbank_recruit/landbank_recruit1.jpg",
       "./img/work/landbank_recruit/landbank_recruit2.jpg",
     ],
+    completionDate: { year: "2023", month: "May" },
     liveDemo: "",
   },
   {
@@ -66,6 +70,7 @@ export const imgData = [
       "./img/work/taishin_summer_exchange/taishin_summer_exchange2.jpg",
       "./img/work/taishin_summer_exchange/taishin_summer_exchange3.jpg",
     ],
+    completionDate: { year: "2022", month: "Jan" },
     liveDemo: "",
   },
   {
@@ -80,6 +85,7 @@ export const imgData = [
       "./img/work/taishin_summer_exchange/taishin_summer_exchange2.jpg",
       "./img/work/taishin_summer_exchange/taishin_summer_exchange3.jpg",
     ],
+    completionDate: { year: "2022", month: "Jan" },
     liveDemo: "",
   },
   {
@@ -94,6 +100,7 @@ export const imgData = [
       "./img/work/taishin_summer_exchange/taishin_summer_exchange2.jpg",
       "./img/work/taishin_summer_exchange/taishin_summer_exchange3.jpg",
     ],
+    completionDate: { year: "2023", month: "Feb" },
     liveDemo: "",
   },
 ];
