@@ -45,6 +45,7 @@ export default function Works() {
             state={{
               name: eachData.name,
               gallery: eachData.gallery,
+              completionDate: eachData.completionDate,
             }}
             key={eachData.id}
           >

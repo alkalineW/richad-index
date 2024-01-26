@@ -17,6 +17,8 @@ export default function SliderWrap({ sliderSettings, data }) {
           state={{
             name: eachData.name,
             gallery: eachData.gallery,
+            liveDemo: eachData.liveDemo,
+            completionDate: eachData.completionDate,
           }}
           to={"works/" + eachData.category + "/" + eachData.urlName}
         >
